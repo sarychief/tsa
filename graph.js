@@ -54,16 +54,17 @@ d3.json("Time_series_map.canvas").then(function(data) {
    }
 
    function ticked() {
-       link
-           .attr("x1", function(d) { return d.source.x; })
-           .attr("y1", function(d) { return d.source.y; })
-           .attr("x2", function(d) { return d.target.x; })
-           .attr("y2", function(d) { return d.target.y; });
-
-       node
-           .attr("x", function(d) { return d.x; })
-           .attr("y", function(d) { return d.y; });
+      link
+          .attr("x1", function(d) { return d.source ? d.source.x : 0; })
+          .attr("y1", function(d) { return d.source ? d.source.y : 0; })
+          .attr("x2", function(d) { return d.target ? d.target.x : 0; })
+          .attr("y2", function(d) { return d.target ? d.target.y : 0; });
+   
+      node
+          .attr("x", function(d) { return d ? d.x : 0; })
+          .attr("y", function(d) { return d ? d.y : 0; });
    }
+
 }).catch(function(error) {
    console.log(error);
 });
