@@ -1,4 +1,4 @@
-d3.json("Time_series_map.canvas").then(function(data) {
+d3.json("Time_series_map.json").then(function(data) {
     var svg = d3.select("#myGraph"),
         width = +svg.attr("width"),
         height = +svg.attr("height");
@@ -11,7 +11,7 @@ d3.json("Time_series_map.canvas").then(function(data) {
     var link = svg.append("g")
         .attr("class", "links")
         .selectAll("line")
-        .data(data.links)
+        .data(data.edges)
         .enter().append("line");
 
     var node = svg.append("g")
@@ -33,7 +33,7 @@ d3.json("Time_series_map.canvas").then(function(data) {
         .on("tick", ticked);
 
     simulation.force("link")
-        .links(data.links);
+        .links(data.edges);
 
     function dragstarted(d) {
         if (!d3.event.active) simulation.alphaTarget(0.3).restart();
