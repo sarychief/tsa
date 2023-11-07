@@ -1,4 +1,4 @@
-d3.json("Временные ряды.canvas").then(function(data) {
+d3.json("Time_series_map.canvas").then(function(data) {
     var svg = d3.select("#myGraph"),
         width = +svg.attr("width"),
         height = +svg.attr("height");
