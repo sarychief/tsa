@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     x: node.x,
                     y: node.y,
                     size: 0.5,
-                    color: 'blue'
+                    color: 'aqua'
                 });
             });
 
