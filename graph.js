@@ -18,14 +18,14 @@ d3.json('Time_series_map.canvas').then(function(graphData) {
         .enter()
         .append('line');
 
-    edges.attr('x1', function(d) { return findNode(d.fromNode).x; })
-        .attr('y1', function(d) { return findNode(d.fromNode).y; })
-        .attr('x2', function(d) { return findNode(d.toNode).x; })
-        .attr('y2', function(d) { return findNode(d.toNode).y; })
+    edges.attr('x1', function(d) { return getNodeById(d.fromNode).x; })
+        .attr('y1', function(d) { return getNodeById(d.fromNode).y; })
+        .attr('x2', function(d) { return getNodeById(d.toNode).x; })
+        .attr('y2', function(d) { return getNodeById(d.toNode).y; })
         .style('stroke', 'black')
         .style('stroke-width', 2);
 
-    function findNode(id) {
+    function getNodeById(id) {
         return graphData.nodes.find(node => node.id === id);
     }
 }).catch(function(error) {
