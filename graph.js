@@ -1,11 +1,8 @@
-import marked from 'https://cdn.jsdelivr.net/npm/marked/marked.min.js';
-
 document.addEventListener('DOMContentLoaded', function() {
     // Загрузите и проанализируйте данные графа из файла .canvas
     fetch('Time_series_map.canvas')
         .then(response => response.json())
         .then(function(graphData) {
-
             // Создайте новый экземпляр sigma
             var s = new sigma('myGraph');
 
@@ -37,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Добавьте обработчик событий на узлы графа
             s.bind('clickNode', function(e) {
                 // Загрузите содержимое файла Markdown
-                fetch('topics/' + e.data.node.label + '.md')
+                fetch(e.data.node.label)
                     .then(response => response.text())
                     .then(function(md) {
                         // Преобразуйте Markdown в HTML
