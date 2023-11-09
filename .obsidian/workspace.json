@@ -11,15 +11,8 @@
             "id": "e5c23b6a0a6c1e14",
             "type": "leaf",
             "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Time_series_map.canvas",
-                "viewState": {
-                  "x": 1737.0861347122416,
-                  "y": 994.6830693900176,
-                  "zoom": -0.7086948185099627
-                }
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -88,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "topics/N-Beats.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "topics/N-Beats.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "topics/N-Beats.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -149,23 +138,36 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "0683f6261227ba02",
+  "active": "e5c23b6a0a6c1e14",
   "lastOpenFiles": [
-    "topics/N-Beats.md",
+    "topics/STL.md",
+    "topics/SSA.md",
     "topics/SOTA.md",
-    "Time_series_map.canvas",
+    "topics/Moving Average.md",
+    "topics/MA.md",
+    "topics/KPSS-test.md",
+    "topics/EMD.md",
+    "topics/EEMD.md",
     "topics/CEEMD.md",
-    "topics/Выделение тренда.md",
-    "topics/Вейвлет разложение.md",
-    "Временные ряды.png",
-    "topics/1.md",
-    "README.md",
-    "topics/Методика Бокса-Дженкинса.md",
-    "topics/Поиск параметров ARMA.md",
+    "topics/ARMA.md",
+    "topics/ARIMA.md",
+    "topics/AR.md",
+    "topics/экспоненциальное сглаживание.md",
+    "topics/Формула Дарби.md",
+    "topics/Уравнение Юлы-Уокера.md",
+    "topics/Тест Кокса-Стюарта.md",
+    "topics/Тест Дарбина-Уотсона.md",
+    "topics/Статистические гипотезы.md",
+    "topics/Спектральный анализ.md",
+    "topics/Регрессионный анализ.md",
+    "topics/Проверка случайности остатков.md",
     "topics/Проверка на стационарность.md",
-    "topics/Метод Ирвина.md",
-    "topics/Критерий Колмогорова-Смирнова.md",
-    "topics/Выделение сезонных и периодических составляющих.md",
-    "topics/Адаптивный анализ.md"
+    "topics/Проверка мат. ожидания остатков.md",
+    "topics/Приближенный алгоритм.md",
+    "topics/Поиск параметров MA.md",
+    "topics/Поиск параметров ARMA.md",
+    "Временные ряды.canvas",
+    "Time_series_map.canvas",
+    "Временные ряды.png"
   ]
 }
