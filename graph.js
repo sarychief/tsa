@@ -1,70 +1,33 @@
-d3.json("Time_series_map.canvas").then(function(data) {
-   var svg = d3.select("#myGraph"),
-       width = +svg.attr("width"),
-       height = +svg.attr("height");
+// Загрузите и проанализируйте данные графа из файла .canvas
+d3.json('Time_series_map.canvas').then(function(graphData) {
 
-   var simulation = d3.forceSimulation()
-       .force("link", d3.forceLink().id(function(d) { return d.id; }))
-       .force("charge", d3.forceManyBody())
-       .force("center", d3.forceCenter(width / 2, height / 2));
-   
-   var link = svg.append("g")
-       .attr("class", "links")
-       .selectAll("line")
-       .data(data.edges)
-       .enter().append("line");
+    // Отображение узлов графа
+    let nodes = d3.select('#myGraph').selectAll('circle')
+        .data(graphData.nodes)
+        .enter()
+        .append('circle');
 
-   var node = svg.append("g")
-       .attr("class", "nodes")
-       .selectAll("rect") // change this to "rect" to match the structure of your nodes
-       .data(data.nodes)
-       .enter().append("rect") // change this to "rect" to match the structure of your nodes
-       .attr("width", function(d) { return d.width; }) // set the width of the rectangles
-       .attr("height", function(d) { return d.height; }) // set the height of the rectangles
-       .call(d3.drag()
-           .on("start", dragstarted)
-           .on("drag", dragged)
-           .on("end", dragended));
-   
-   node.append("title")
-       .text(function(d) { return d.id; });
+    nodes.attr('cx', function(d) { return d.x; })
+        .attr('cy', function(d) { return d.y; })
+        .attr('r', 20)
+        .style('fill', 'blue');
 
-   simulation
-       .nodes(data.nodes)
-       .on("tick", ticked);
+    // Отображение связей между узлами
+    let edges = d3.select('#myGraph').selectAll('line')
+        .data(graphData.edges)
+        .enter()
+        .append('line');
 
-   simulation.force("link")
-       .links(data.edges);
+    edges.attr('x1', function(d) { return findNode(d.fromNode).x; })
+        .attr('y1', function(d) { return findNode(d.fromNode).y; })
+        .attr('x2', function(d) { return findNode(d.toNode).x; })
+        .attr('y2', function(d) { return findNode(d.toNode).y; })
+        .style('stroke', 'black')
+        .style('stroke-width', 2);
 
-   function dragstarted(d) {
-       if (!d3.event.active) simulation.alphaTarget(0.3).restart();
-       d.fx = d.x;
-       d.fy = d.y;
-   }
-
-   function dragged(d) {
-       d.fx = d3.event.x;
-       d.fy = d3.event.y;
-   }
-
-   function dragended(d) {
-       if (!d3.event.active) simulation.alphaTarget(0);
-       d.fx = null;
-       d.fy = null;
-   }
-
-   function ticked() {
-      link
-          .attr("x1", function(d) { return d.source ? d.source.x : 0; })
-          .attr("y1", function(d) { return d.source ? d.source.y : 0; })
-          .attr("x2", function(d) { return d.target ? d.target.x : 0; })
-          .attr("y2", function(d) { return d.target ? d.target.y : 0; });
-   
-      node
-          .attr("x", function(d) { return d ? d.x : 0; })
-          .attr("y", function(d) { return d ? d.y : 0; });
-   }
-
+    function findNode(id) {
+        return graphData.nodes.find(node => node.id === id);
+    }
 }).catch(function(error) {
-   console.log(error);
+    console.log('Ошибка при загрузке или анализе данных графа: ', error);
 });
