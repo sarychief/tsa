@@ -21,15 +21,15 @@ document.addEventListener('DOMContentLoaded', function() {
             // Добавьте узлы в граф sigma
             graphData.nodes.forEach(function(node, index) {
                 // Извлекаем название файла из ссылки, если есть свойство file, в противном случае используем свойство text
-                var fileName = node.file ? node.file.match(/topics\/(.+?)\.md/)[1] : node.text;
+                var fileName = node.file ? node.file.replace(/^.*[\\\/]/, '').replace('.md', '') : node.text;
             
                 s.graph.addNode({
                     id: node.id,
                     label: fileName,
                     x: node.x,
                     y: node.y,
-                    size: 0.5,
-                    color: 'aqua'
+                    size: 0.3,
+                    color: 'lightblue'
                 });
             });
 
@@ -39,7 +39,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     id: 'e' + index,
                     source: edge.fromNode,
                     target: edge.toNode,
-                    color: 'black'
+                    size: 0.5, 
+                    color: 'gray' 
                 });
             });
 
