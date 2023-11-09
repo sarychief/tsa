@@ -11,8 +11,15 @@
             "id": "e5c23b6a0a6c1e14",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "canvas",
+              "state": {
+                "file": "Time_series_map.canvas",
+                "viewState": {
+                  "x": 2317.5726697566256,
+                  "y": 592.2654258130002,
+                  "zoom": -2.0326874409752627
+                }
+              }
             }
           }
         ]
@@ -81,6 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Time_series_map.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +105,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Time_series_map.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +127,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Time_series_map.canvas"
+              }
             }
           }
         ]
@@ -138,9 +149,13 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "e5c23b6a0a6c1e14",
+  "active": "0683f6261227ba02",
   "lastOpenFiles": [
+    "Daily/Декомпозиция.md",
     "Time_series_map.canvas",
+    "Daily",
+    "Time_series_map.canvas.sb-6e988788-1ePYJg",
+    "README.md",
     "topics/STL.md",
     "topics/SSA.md",
     "topics/SOTA.md",
@@ -164,8 +179,6 @@
     "topics/Проверка случайности остатков.md",
     "topics/Проверка на стационарность.md",
     "topics/Проверка мат. ожидания остатков.md",
-    "topics/Приближенный алгоритм.md",
-    "topics/Поиск параметров MA.md",
     "Временные ряды.canvas",
     "Временные ряды.png"
   ]
