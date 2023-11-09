@@ -1,0 +1,171 @@
+{
+  "main": {
+    "id": "a11558da25ffef4b",
+    "type": "split",
+    "children": [
+      {
+        "id": "49245fa4fd0cc596",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e5c23b6a0a6c1e14",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Time_series_map.canvas",
+                "viewState": {
+                  "x": 1737.0861347122416,
+                  "y": 994.6830693900176,
+                  "zoom": -0.7086948185099627
+                }
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "4de1d72f2fc5f0c8",
+    "type": "split",
+    "children": [
+      {
+        "id": "c20eeddc0016b384",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0683f6261227ba02",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "7fc4c3ed09a80bd8",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "9e14223780cc4a0f",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "63336596e9f712a8",
+    "type": "split",
+    "children": [
+      {
+        "id": "82d0d0b6b51f437c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ffb691b7f86549b0",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "topics/N-Beats.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b6011956861e6c32",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "topics/N-Beats.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "92b7a33e4fbbaaf4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "e078107d56f8bbd9",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "topics/N-Beats.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Меню быстрого перехода": false,
+      "graph:Граф": false,
+      "canvas:Создать новый холст": false,
+      "daily-notes:Сегодняшняя заметка": false,
+      "templates:Вставить шаблон": false,
+      "command-palette:Открыть палитру команд": false
+    }
+  },
+  "active": "0683f6261227ba02",
+  "lastOpenFiles": [
+    "topics/N-Beats.md",
+    "topics/SOTA.md",
+    "Time_series_map.canvas",
+    "topics/CEEMD.md",
+    "topics/Выделение тренда.md",
+    "topics/Вейвлет разложение.md",
+    "Временные ряды.png",
+    "topics/1.md",
+    "README.md",
+    "topics/Методика Бокса-Дженкинса.md",
+    "topics/Поиск параметров ARMA.md",
+    "topics/Проверка на стационарность.md",
+    "topics/Метод Ирвина.md",
+    "topics/Критерий Колмогорова-Смирнова.md",
+    "topics/Выделение сезонных и периодических составляющих.md",
+    "topics/Адаптивный анализ.md"
+  ]
+}

@@ -1,5 +1,6 @@
 {
 	"nodes":[
+		{"id":"65177fa73af958f3","type":"file","file":"topics/N-Beats.md","x":1753,"y":1427,"width":250,"height":60},
 		{"id":"45722bb8238e909a","type":"text","text":"Стационарные ВР","x":160,"y":-29,"width":250,"height":60},
 		{"id":"829a746da1c578e0","type":"text","text":"Преобразование Фурье","x":2554,"y":-1010,"width":250,"height":60},
 		{"id":"d88f93f4620658e9","type":"text","text":"Усреднение и оконная свертка","x":2554,"y":-912,"width":250,"height":60},
@@ -54,7 +55,6 @@
 		{"id":"fdb29daaca0ec925","type":"text","text":"Нестационарные ВР","x":478,"y":1967,"width":250,"height":60},
 		{"id":"75866b5fef228605","type":"file","file":"./topics/Адаптивный анализ.md","x":859,"y":2640,"width":380,"height":60},
 		{"id":"760ac2fb1482591f","type":"text","text":"Разложения\n","x":1423,"y":2640,"width":160,"height":60},
-		{"id":"3b2b5ae17ab35393","type":"file","file":"./topics/SOTA.md","x":2007,"y":1373,"width":156,"height":50,"color":"5"},
 		{"id":"4a2b1c873824e32c","type":"file","file":"./topics/Критерий серии, на основе медианы.md","x":-76,"y":1146,"width":626,"height":51,"color":"5"},
 		{"id":"a8065c2b9f17b94e","type":"file","file":"./topics/KPSS-test.md","x":-76,"y":1480,"width":232,"height":50,"color":"5"},
 		{"id":"c12363e7baeade48","type":"file","file":"./topics/Метод Фишера + метод Стьюдента.md","x":-76,"y":840,"width":649,"height":52,"color":"5"},
@@ -64,7 +64,8 @@
 		{"id":"9b322d9c70360821","type":"file","file":"./topics/EMD.md","x":2238,"y":2670,"width":172,"height":60,"color":"5"},
 		{"id":"beecdec6e4b9c976","type":"file","file":"./topics/Вейвлет разложение.md","x":1914,"y":2520,"width":380,"height":50,"color":"5"},
 		{"id":"f86626f30d56ed58","type":"file","file":"./topics/SSA.md","x":1583,"y":2220,"width":125,"height":50,"color":"5"},
-		{"id":"5fc4eb07764ba4fd","type":"text","text":"STL","x":1789,"y":2320,"width":250,"height":60,"color":"2"}
+		{"id":"5fc4eb07764ba4fd","type":"text","text":"STL","x":1789,"y":2320,"width":250,"height":60,"color":"2"},
+		{"id":"3b2b5ae17ab35393","type":"file","file":"./topics/SOTA.md","x":1420,"y":1400,"width":156,"height":50,"color":"5"}
 	],
 	"edges":[
 		{"id":"3d2ff51cc293e977","fromNode":"50931c926be1771e","fromSide":"right","toNode":"0cb38af75e766f6d","toSide":"left"},
@@ -140,6 +141,7 @@
 		{"id":"2155eb83820815a0","fromNode":"fdb29daaca0ec925","fromSide":"right","toNode":"01a418f87f72e4de","toSide":"left"},
 		{"id":"7466a64e7ee397db","fromNode":"01a418f87f72e4de","fromSide":"right","toNode":"ea7709f27767a4e6","toSide":"left"},
 		{"id":"bcb9feeac6ce97f8","fromNode":"01a418f87f72e4de","fromSide":"right","toNode":"05d8a4e29ac890ae","toSide":"left"},
-		{"id":"ec72c474b94b9d80","fromNode":"fdb29daaca0ec925","fromSide":"top","toNode":"0109c09994c145d2","toSide":"left"}
+		{"id":"ec72c474b94b9d80","fromNode":"fdb29daaca0ec925","fromSide":"top","toNode":"0109c09994c145d2","toSide":"left"},
+		{"id":"238d8c6761f95b47","fromNode":"3b2b5ae17ab35393","fromSide":"right","toNode":"65177fa73af958f3","toSide":"left"}
 	]
 }
