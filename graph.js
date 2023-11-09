@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     label: fileName,
                     x: node.x,
                     y: node.y,
-                    size: 0.3,
+                    size: 2,
                     color: 'lightblue'
                 });
             });
