@@ -32,6 +32,19 @@ document.addEventListener('DOMContentLoaded', function() {
             // Обновите граф, чтобы отобразить добавленные узлы и связи
             s.refresh();
 
+            // Добавьте обработчик событий на узлы графа
+            s.bind('clickNode', function(e) {
+                // Загрузите содержимое файла Markdown
+                fetch('topics/' + e.data.node.label + '.md')
+                    .then(response => response.text())
+                    .then(function(md) {
+                        // Преобразуйте Markdown в HTML
+                        var html = marked(md);
+                        // Отобразите HTML на странице
+                        document.getElementById('content').innerHTML = html;
+                    });
+            });
+
         }).catch(function(error) {
             console.log('Ошибка при загрузке или анализе данных графа: ', error);
         });
