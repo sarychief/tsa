@@ -45,12 +45,6 @@
 		{"id":"5af010f9943a49b2","type":"file","file":"./topics/Moving Average.md","x":4112,"y":1640,"width":294,"height":50,"color":"5"},
 		{"id":"5c512efe93452040","type":"file","file":"./topics/Выделение тренда сглаживания.md","x":4112,"y":1827,"width":558,"height":60,"color":"5"},
 		{"id":"fb4bfcd6ebe80989","type":"file","file":"./topics/экспоненциальное сглаживание.md","x":4112,"y":2050,"width":560,"height":50,"color":"5"},
-		{"id":"f86626f30d56ed58","type":"file","file":"./topics/SSA.md","x":1979,"y":2167,"width":125,"height":50,"color":"5"},
-		{"id":"5fc4eb07764ba4fd","type":"text","text":"STL","x":1988,"y":2327,"width":250,"height":60,"color":"2"},
-		{"id":"beecdec6e4b9c976","type":"file","file":"./topics/Вейвлет разложение.md","x":1979,"y":2522,"width":380,"height":50,"color":"5"},
-		{"id":"9b322d9c70360821","type":"file","file":"./topics/EMD.md","x":2146,"y":2640,"width":172,"height":60,"color":"5"},
-		{"id":"08a58a2269d3559c","type":"file","file":"./topics/EEMD.md","x":2071,"y":2780,"width":149,"height":60,"color":"5"},
-		{"id":"3fe6d986d433e413","type":"file","file":"./topics/CEEMD.md","x":1979,"y":2920,"width":184,"height":60,"color":"5"},
 		{"id":"01a418f87f72e4de","type":"file","file":"Daily/Декомпозиция.md","x":1583,"y":1967,"width":296,"height":60,"color":"5"},
 		{"id":"a01b3e5649e1aa53","type":"file","file":"./topics/Регрессионный анализ.md","x":3313,"y":1690,"width":425,"height":50,"color":"5"},
 		{"id":"ea7709f27767a4e6","type":"file","file":"./topics/Выделение тренда.md","x":2678,"y":1827,"width":360,"height":60,"color":"5"},
@@ -64,7 +58,13 @@
 		{"id":"4a2b1c873824e32c","type":"file","file":"./topics/Критерий серии, на основе медианы.md","x":-76,"y":1146,"width":626,"height":51,"color":"5"},
 		{"id":"a8065c2b9f17b94e","type":"file","file":"./topics/KPSS-test.md","x":-76,"y":1480,"width":232,"height":50,"color":"5"},
 		{"id":"c12363e7baeade48","type":"file","file":"./topics/Метод Фишера + метод Стьюдента.md","x":-76,"y":840,"width":649,"height":52,"color":"5"},
-		{"id":"35e5f353321c3e1c","type":"text","text":"Модели","x":1131,"y":780,"width":250,"height":60}
+		{"id":"35e5f353321c3e1c","type":"text","text":"Модели","x":1131,"y":780,"width":250,"height":60},
+		{"id":"3fe6d986d433e413","type":"file","file":"./topics/CEEMD.md","x":2620,"y":3120,"width":184,"height":60,"color":"5"},
+		{"id":"08a58a2269d3559c","type":"file","file":"./topics/EEMD.md","x":2471,"y":2900,"width":149,"height":60,"color":"5"},
+		{"id":"9b322d9c70360821","type":"file","file":"./topics/EMD.md","x":2238,"y":2670,"width":172,"height":60,"color":"5"},
+		{"id":"beecdec6e4b9c976","type":"file","file":"./topics/Вейвлет разложение.md","x":1914,"y":2520,"width":380,"height":50,"color":"5"},
+		{"id":"f86626f30d56ed58","type":"file","file":"./topics/SSA.md","x":1583,"y":2220,"width":125,"height":50,"color":"5"},
+		{"id":"5fc4eb07764ba4fd","type":"text","text":"STL","x":1789,"y":2320,"width":250,"height":60,"color":"2"}
 	],
 	"edges":[
 		{"id":"3d2ff51cc293e977","fromNode":"50931c926be1771e","fromSide":"right","toNode":"0cb38af75e766f6d","toSide":"left"},
