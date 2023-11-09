@@ -140,6 +140,7 @@
   },
   "active": "e5c23b6a0a6c1e14",
   "lastOpenFiles": [
+    "Time_series_map.canvas",
     "topics/STL.md",
     "topics/SSA.md",
     "topics/SOTA.md",
@@ -165,9 +166,7 @@
     "topics/Проверка мат. ожидания остатков.md",
     "topics/Приближенный алгоритм.md",
     "topics/Поиск параметров MA.md",
-    "topics/Поиск параметров ARMA.md",
     "Временные ряды.canvas",
-    "Time_series_map.canvas",
     "Временные ряды.png"
   ]
 }
