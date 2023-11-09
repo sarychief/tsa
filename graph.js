@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     label: fileName,
                     x: node.x,
                     y: node.y,
-                    size: 2,
+                    size: 1,
                     color: 'lightblue'
                 });
             });
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     id: 'e' + index,
                     source: edge.fromNode,
                     target: edge.toNode,
-                    size: 0.5, 
+                    size: 1, 
                     color: 'gray' 
                 });
             });
