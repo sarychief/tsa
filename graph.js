@@ -1,3 +1,5 @@
+import marked from 'https://cdn.jsdelivr.net/npm/marked/marked.min.js';
+
 document.addEventListener('DOMContentLoaded', function() {
     // Загрузите и проанализируйте данные графа из файла .canvas
     fetch('Time_series_map.canvas')
