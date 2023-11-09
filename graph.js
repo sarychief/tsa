@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     label: node.text,
                     x: node.x,
                     y: node.y,
-                    size: 1,
+                    size: 0.5,
                     color: 'blue'
                 });
             });
