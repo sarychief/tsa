@@ -7,10 +7,25 @@ document.addEventListener('DOMContentLoaded', function() {
             var s = new sigma('myGraph');
 
             // Добавьте узлы в граф sigma
+            // graphData.nodes.forEach(function(node, index) {
+            //     s.graph.addNode({
+            //         id: node.id,
+            //         label: node.text,
+            //         x: node.x,
+            //         y: node.y,
+            //         size: 0.5,
+            //         color: 'aqua'
+            //     });
+            // });
+
+            // Добавьте узлы в граф sigma
             graphData.nodes.forEach(function(node, index) {
+                // Извлекаем название файла из ссылки
+                var fileName = node.text || node.file.match(/topics\/(.+?)\.md/)[1];
+            
                 s.graph.addNode({
                     id: node.id,
-                    label: node.text,
+                    label: fileName,
                     x: node.x,
                     y: node.y,
                     size: 0.5,
