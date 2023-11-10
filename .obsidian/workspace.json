@@ -15,9 +15,9 @@
               "state": {
                 "file": "Time_series_map.canvas",
                 "viewState": {
-                  "x": 2317.5726697566256,
-                  "y": 592.2654258130002,
-                  "zoom": -2.0326874409752627
+                  "x": 2510.1756663506103,
+                  "y": 723.7066783417961,
+                  "zoom": -2.430900726715723
                 }
               }
             }
@@ -149,10 +149,11 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "0683f6261227ba02",
+  "active": "e5c23b6a0a6c1e14",
   "lastOpenFiles": [
-    "Daily/Декомпозиция.md",
+    "topics/MA.md",
     "Time_series_map.canvas",
+    "Daily/Декомпозиция.md",
     "Daily",
     "Time_series_map.canvas.sb-6e988788-1ePYJg",
     "README.md",
@@ -160,7 +161,6 @@
     "topics/SSA.md",
     "topics/SOTA.md",
     "topics/Moving Average.md",
-    "topics/MA.md",
     "topics/KPSS-test.md",
     "topics/EMD.md",
     "topics/EEMD.md",

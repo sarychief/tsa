@@ -1,26 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Загрузите и проанализируйте данные графа из файла .canvas
     fetch('Time_series_map.canvas')
         .then(response => response.json())
         .then(function(graphData) {
-            // Создайте новый экземпляр sigma
             var s = new sigma('myGraph');
 
-            // Добавьте узлы в граф sigma
-            // graphData.nodes.forEach(function(node, index) {
-            //     s.graph.addNode({
-            //         id: node.id,
-            //         label: node.text,
-            //         x: node.x,
-            //         y: node.y,
-            //         size: 0.5,
-            //         color: 'aqua'
-            //     });
-            // });
-
-            // Добавьте узлы в граф sigma
             graphData.nodes.forEach(function(node, index) {
-                // Извлекаем название файла из ссылки, если есть свойство file, в противном случае используем свойство text
                 var fileName = node.file ? node.file.replace(/^.*[\\\/]/, '').replace('.md', '') : node.text;
             
                 s.graph.addNode({
@@ -28,34 +12,28 @@ document.addEventListener('DOMContentLoaded', function() {
                     label: fileName,
                     x: node.x,
                     y: node.y,
-                    size: 0.3,
+                    size: 1,
                     color: 'lightblue'
                 });
             });
 
-            // Добавьте связи в граф sigma
             graphData.edges.forEach(function(edge, index) {
                 s.graph.addEdge({
                     id: 'e' + index,
                     source: edge.fromNode,
                     target: edge.toNode,
-                    size: 0.5, 
+                    size: 1, 
                     color: 'gray' 
                 });
             });
 
-            // Обновите граф, чтобы отобразить добавленные узлы и связи
             s.refresh();
 
-            // Добавьте обработчик событий на узлы графа
             s.bind('clickNode', function(e) {
-                // Загрузите содержимое файла Markdown
                 fetch(e.data.node.label)
                     .then(response => response.text())
                     .then(function(md) {
-                        // Преобразуйте Markdown в HTML
                         var html = marked(md);
-                        // Отобразите HTML на странице
                         document.getElementById('content').innerHTML = html;
                     });
             });
