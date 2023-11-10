@@ -92,3 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Ошибка при загрузке или анализе данных графа: ', error);
         });
 });
+
+
+// Call the function when the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', renderGraph);
