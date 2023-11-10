@@ -4,6 +4,36 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(function(graphData) {
             var s = new sigma('myGraph');
 
+            s.settings({
+                labelRenderer: function(node, context, settings) {
+                    var fontSize = (settings.labelSize === 'fixed') ? settings.defaultLabelSize : settings.labelSize * node.size;
+                    var prefix = settings('prefix') || '';
+                    var size = node[prefix + 'size'];
+                    if (size < settings('labelThreshold')) return;
+
+                    context.font = (settings('fontStyle') ? settings('fontStyle') + ' ' : '') + fontSize + 'px ' + (settings('font') || 'serif');
+                    context.fillStyle = node.color || settings('defaultNodeColor');
+
+                    // Set background color
+                    context.fillRect(
+                        Math.round(node[prefix + 'x'] - fontSize / 2 - 2), 
+                        Math.round(node[prefix + 'y'] - fontSize / 2 - 2),
+                        context.measureText(node.label).width + 4,
+                        fontSize + 4
+                    );
+
+                    // Now draw the text
+                    context.textAlign = 'center';
+                    context.textBaseline = 'middle';
+                    context.fillStyle = 'black';
+                    context.fillText(
+                        node.label,
+                        Math.round(node[prefix + 'x']),
+                        Math.round(node[prefix + 'y'])
+                    );
+                }
+            });
+            
             graphData.nodes.forEach(function(node, index) {
                 var fileName = node.file ? node.file.replace(/^.*[\\\/]/, '').replace('.md', '') : node.text;
             
