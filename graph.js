@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             // Обрабатываем изображения
                             var images = newWindow.document.querySelectorAll('img');
                             images.forEach(function(img) {
-                                img.src = 'photos/' + fileName + '/' + img.getAttribute('src');
+                                img.src = 'topics/' + fileName + '/' + img.getAttribute('src');
                             });
                         }, 100);
                     });
