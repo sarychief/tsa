@@ -41,10 +41,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     .then(function(md) {
                         var html = marked(md);
                         
-                        // Записываем HTML содержимое в новое окно
-                        newWindow.document.write(html);
+                        // Добавляем небольшую задержку перед записью HTML
+                        setTimeout(function() {
+                            // Записываем HTML содержимое в новое окно
+                            newWindow.document.write(html);
+
+                            // Обновляем MathJax для обработки математических формул
+                            MathJax.typeset([newWindow.document.body]);
+                        }, 100);
                     });
-            });
 
         }).catch(function(error) {
             console.log('Ошибка при загрузке или анализе данных графа: ', error);
