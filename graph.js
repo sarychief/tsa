@@ -30,7 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
             s.refresh();
 
             s.bind('clickNode', function(e) {
-                fetch(e.data.node.label)
+                // fetch(e.data.node.label)
+                fetch('topics/' + e.data.node.label)
                     .then(response => response.text())
                     .then(function(md) {
                         var html = marked(md);
