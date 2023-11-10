@@ -30,12 +30,19 @@ document.addEventListener('DOMContentLoaded', function() {
             s.refresh();
 
             s.bind('clickNode', function(e) {
-                // fetch(e.data.node.label)
-                fetch('topics/' + e.data.node.label)
+                var fileName = e.data.node.label;
+
+                // Открываем новое окно браузера с именем файла в заголовке
+                var newWindow = window.open("", fileName);
+
+                // Загружаем содержимое .md файла в новое окно
+                fetch('topics/' + fileName + '.md')
                     .then(response => response.text())
                     .then(function(md) {
                         var html = marked(md);
-                        document.getElementById('content').innerHTML = html;
+                        
+                        // Записываем HTML содержимое в новое окно
+                        newWindow.document.write(html);
                     });
             });
 
