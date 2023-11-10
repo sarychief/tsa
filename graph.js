@@ -45,9 +45,15 @@ document.addEventListener('DOMContentLoaded', function() {
                         setTimeout(function() {
                             // Записываем HTML содержимое в новое окно
                             newWindow.document.write(html);
-
+                        
                             // Обновляем MathJax для обработки математических формул
                             MathJax.typeset([newWindow.document.body]);
+                        
+                            // Обрабатываем изображения
+                            var images = newWindow.document.querySelectorAll('img');
+                            images.forEach(function(img) {
+                                img.src = 'photos/' + fileName + '/' + img.getAttribute('src');
+                            });
                         }, 100);
                     });
             });
