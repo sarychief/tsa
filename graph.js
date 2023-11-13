@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             // Обрабатываем изображения
                             var images = newWindow.document.querySelectorAll('img');
                             images.forEach(function(img) {
-                                img.src = 'https://raw.githubusercontent.com/sarychief/tsa/main/photos/' + fileName + '/' + img.getAttribute('src');
+                                img.src = 'photos/' + fileName + '/' + img.getAttribute('src');
                             });
                         }, 100);
                     });
