@@ -37,15 +37,13 @@ document.addEventListener('DOMContentLoaded', function() {
             graphData.nodes.forEach(function(node, index) {
                 var fileName = node.file ? node.file.replace(/^.*[\\\/]/, '').replace('.md', '') : node.text;
 
-                var color = md.length === 0 ? 'red' : 'lightblue';
-
                 s.graph.addNode({
                     id: node.id,
                     label: fileName,
                     x: node.x,
                     y: node.y,
                     size: 1,
-                    color: color
+                    color: 'red'
                 });
             });
 
