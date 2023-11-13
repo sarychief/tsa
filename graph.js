@@ -67,6 +67,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 fetch('topics/' + fileName + '.md')
                     .then(response => response.text())
                     .then(function(md) {
+                        // изменение цвета 
+                        var color = md.length === 0 ? 'red' : 'lightblue';
+
+                       s.graph.addNode({
+                           id: node.id,
+                           label: fileName,
+                           x: node.x,
+                           y: node.y,
+                           size: 1,
+                           color: color
+                       });
                         
                         var updatedMd = md.replace(/\$(.*?)\$/g, "\\\\($1\\\\)");
                         var updatedMd2 = updatedMd.replace(/\$\$(.*?)\$\$/g, "\\\\[$1\\\\]");
