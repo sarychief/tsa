@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             MathJax.typesetPromise([newWindow.document.body]).catch((err) => console.log(err.message));
                             
                             // Обрабатываем изображения
-                            var images = newWindow.document.querySelectorAll('img');
+                            var images = newWindow.document.querySelectorAll('png');
                             images.forEach(function(img) {
                                 // img.src = 'photos/' + fileName + '/' + img.getAttribute('src');
                                 var imgSrc = img.getAttribute('src');
