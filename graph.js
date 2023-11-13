@@ -62,26 +62,21 @@ document.addEventListener('DOMContentLoaded', function() {
             s.bind('clickNode', function(e) {
                 var fileName = e.data.node.label;
 
-                // Открываем новое окно браузера с именем файла в заголовке
                 var newWindow = window.open("", fileName);
 
-                // Загружаем содержимое .md файла в новое окно
                 fetch('topics/' + fileName + '.md')
                     .then(response => response.text())
                     .then(function(md) {
-                        // Заменяем одиночные знаки доллара на обратные слеши
+                        
                         var updatedMd = md.replace(/\$(.*?)\$/g, "\\\\($1\\\\)");
-                
-                        var html = marked(updatedMd);
+                        var updatedMd2 = updatedMd.replace(/\$\$(.*?)\$\$/g, "\\\\[$1\\\\]");
+
+                        var html = marked(updatedMd2);
                         // var html = marked(md);
                         
-                        // Добавляем небольшую задержку перед записью HTML
                         setTimeout(function() {
-                            // Записываем HTML содержимое в новое окно
                             newWindow.document.write(html);
                         
-                            // Обновляем MathJax для обработки математических формул
-                            // MathJax.typeset([newWindow.document.body]);
                             MathJax.typesetPromise([newWindow.document.body]).catch((err) => console.log(err.message));
                             
                             // Обрабатываем изображения
