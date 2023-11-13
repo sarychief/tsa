@@ -77,8 +77,9 @@ document.addEventListener('DOMContentLoaded', function() {
                             newWindow.document.write(html);
                         
                             // Обновляем MathJax для обработки математических формул
-                            MathJax.typeset([newWindow.document.body]);
-                        
+                            // MathJax.typeset([newWindow.document.body]);
+                            MathJax.typesetPromise([newWindow.document.body]).catch((err) => console.log(err.message));
+                            
                             // Обрабатываем изображения
                             var images = newWindow.document.querySelectorAll('img');
                             images.forEach(function(img) {
