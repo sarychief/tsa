@@ -69,7 +69,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 fetch('topics/' + fileName + '.md')
                     .then(response => response.text())
                     .then(function(md) {
-                        var html = marked(md);
+                        // Заменяем одиночные знаки доллара на обратные слеши
+                        var updatedMd = md.replace(/\$(.*?)\$/g, '\\\\(\$1)\\\\');
+                
+                        var html = marked(updatedMd);
+                        // var html = marked(md);
                         
                         // Добавляем небольшую задержку перед записью HTML
                         setTimeout(function() {
