@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                        // Find image references and replace them with the correct URL
                        updatedMd2 = updatedMd2.replace(/!\[\[(.*?)\]\]/g, function(match, p1) {
-                           return '![Alt text](https://raw.githubusercontent.com/sarychief/tsa/main/photos/' + p1 + ')';
+                           return '![Alt text](https://raw.githubusercontent.com/sarychief/tsa/main/photos/' + p1 + '" width="200" height="auto" />';
                        });
 
                         var html = marked(updatedMd2);
