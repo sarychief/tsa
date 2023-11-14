@@ -101,6 +101,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     })
                     .catch(function(error) {
                         console.log('Ошибка при загрузке или анализе данных графа: ', error);
+
+                        // Предотвращаем переход по ссылке
+                        e.preventDefault();
+                        e.stopPropagation();
                     });
             });
 
