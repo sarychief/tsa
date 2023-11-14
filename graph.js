@@ -65,7 +65,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 var newWindow = window.open("", fileName);
 
                 fetch('topics/' + fileName + '.md')
-                    .then(response => response.text())
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('File not found or empty');
+                        }
+                        return response.text();
+                    })
                     .then(function(md) {
                         
                         var updatedMd = md.replace(/\$(.*?)\$/g, "\\\\($1\\\\)");
@@ -93,6 +98,9 @@ document.addEventListener('DOMContentLoaded', function() {
                                 img.src = 'https://raw.githubusercontent.com/sarychief/tsa/main/photos/' + fileName + '/' + imgSrc;
                             });
                         }, 100);
+                    })
+                    .catch(function(error) {
+                        console.log('Ошибка при загрузке или анализе данных графа: ', error);
                     });
             });
 
