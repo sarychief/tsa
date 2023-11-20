@@ -58,12 +58,13 @@ document.addEventListener('DOMContentLoaded', function() {
             });
 
             s.refresh();
-
+            
             s.bind('clickNode', function(e) {
                 var fileName = e.data.node.label;
-
-                var newWindow = window.open("", fileName);
-
+            
+                // Изменение адреса в новой вкладке
+                var newWindow = window.open('https://sarychief.github.io/tsa/' + fileName, '_blank');
+            
                 fetch('topics/' + fileName + '.md')
                     .then(response => {
                         if (!response.ok) {
@@ -72,28 +73,23 @@ document.addEventListener('DOMContentLoaded', function() {
                         return response.text();
                     })
                     .then(function(md) {
-                        
                         var updatedMd = md.replace(/\$(.*?)\$/g, "\\\\($1\\\\)");
                         var updatedMd2 = updatedMd.replace(/\$\$(.*?)\$\$/g, "\\\\[$1\\\\]");
-
-                       // Find image references and replace them with the correct URL
-                       updatedMd2 = updatedMd2.replace(/!\[\[(.*?)\]\]/g, function(match, p1) {
-                           // return '![Alt text](https://raw.githubusercontent.com/sarychief/tsa/main/photos/' + p1 + ')';
-                           return '<img src="https://raw.githubusercontent.com/sarychief/tsa/main/photos/' + p1 + '" width="500" height="auto" />';
-                       });
-
+            
+                        // Find image references and replace them with the correct URL
+                        updatedMd2 = updatedMd2.replace(/!\[\[(.*?)\]\]/g, function(match, p1) {
+                            return '<img src="https://raw.githubusercontent.com/sarychief/tsa/main/photos/' + p1 + '" width="500" height="auto" />';
+                        });
+            
                         var html = marked(updatedMd2);
-                        // var html = marked(md);
-                        
+            
                         setTimeout(function() {
                             newWindow.document.write(html);
-                        
                             MathJax.typesetPromise([newWindow.document.body]).catch((err) => console.log(err.message));
-                            
+            
                             // Обрабатываем изображения
-                            var images = newWindow.document.querySelectorAll('png');
+                            var images = newWindow.document.querySelectorAll('img');
                             images.forEach(function(img) {
-                                // img.src = 'photos/' + fileName + '/' + img.getAttribute('src');
                                 var imgSrc = img.getAttribute('src');
                                 img.src = 'https://raw.githubusercontent.com/sarychief/tsa/main/photos/' + fileName + '/' + imgSrc;
                             });
@@ -101,12 +97,59 @@ document.addEventListener('DOMContentLoaded', function() {
                     })
                     .catch(function(error) {
                         console.log('Ошибка при загрузке или анализе данных графа: ', error);
-
                         // Предотвращаем переход по ссылке
                         e.preventDefault();
                         e.stopPropagation();
                     });
             });
+            // s.bind('clickNode', function(e) {
+            //     var fileName = e.data.node.label;
+
+            //     var newWindow = window.open("", fileName);
+
+            //     fetch('topics/' + fileName + '.md')
+            //         .then(response => {
+            //             if (!response.ok) {
+            //                 throw new Error('File not found or empty');
+            //             }
+            //             return response.text();
+            //         })
+            //         .then(function(md) {
+                        
+            //             var updatedMd = md.replace(/\$(.*?)\$/g, "\\\\($1\\\\)");
+            //             var updatedMd2 = updatedMd.replace(/\$\$(.*?)\$\$/g, "\\\\[$1\\\\]");
+
+            //            // Find image references and replace them with the correct URL
+            //            updatedMd2 = updatedMd2.replace(/!\[\[(.*?)\]\]/g, function(match, p1) {
+            //                // return '![Alt text](https://raw.githubusercontent.com/sarychief/tsa/main/photos/' + p1 + ')';
+            //                return '<img src="https://raw.githubusercontent.com/sarychief/tsa/main/photos/' + p1 + '" width="500" height="auto" />';
+            //            });
+
+            //             var html = marked(updatedMd2);
+            //             // var html = marked(md);
+                        
+            //             setTimeout(function() {
+            //                 newWindow.document.write(html);
+                        
+            //                 MathJax.typesetPromise([newWindow.document.body]).catch((err) => console.log(err.message));
+                            
+            //                 // Обрабатываем изображения
+            //                 var images = newWindow.document.querySelectorAll('png');
+            //                 images.forEach(function(img) {
+            //                     // img.src = 'photos/' + fileName + '/' + img.getAttribute('src');
+            //                     var imgSrc = img.getAttribute('src');
+            //                     img.src = 'https://raw.githubusercontent.com/sarychief/tsa/main/photos/' + fileName + '/' + imgSrc;
+            //                 });
+            //             }, 100);
+            //         })
+            //         .catch(function(error) {
+            //             console.log('Ошибка при загрузке или анализе данных графа: ', error);
+
+            //             // Предотвращаем переход по ссылке
+            //             e.preventDefault();
+            //             e.stopPropagation();
+            //         });
+            // });
 
         }).catch(function(error) {
             console.log('Ошибка при загрузке или анализе данных графа: ', error);
