@@ -65,6 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Изменение адреса в новой вкладке
                 var newWindow = window.open('https://sarychief.github.io/tsa/' + fileName, '_blank');
             
+                // Проверка существования файла перед загрузкой
                 fetch('topics/' + fileName + '.md')
                     .then(response => {
                         if (!response.ok) {
@@ -97,11 +98,16 @@ document.addEventListener('DOMContentLoaded', function() {
                     })
                     .catch(function(error) {
                         console.log('Ошибка при загрузке или анализе данных графа: ', error);
-                        // Предотвращаем переход по ссылке
-                        e.preventDefault();
-                        e.stopPropagation();
+            
+                        // Закрываем новое окно, если произошла ошибка
+                        newWindow.close();
                     });
+            
+                // Предотвращаем переход по ссылке
+                e.preventDefault();
+                e.stopPropagation();
             });
+
             // s.bind('clickNode', function(e) {
             //     var fileName = e.data.node.label;
 
