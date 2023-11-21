@@ -90,9 +90,10 @@ document.addEventListener('DOMContentLoaded', function() {
             
                             // Обрабатываем изображения
                             var images = newWindow.document.querySelectorAll('img');
-                            images.forEach(function(img) {
-                                var imgSrc = img.getAttribute('src');
-                                img.src = 'https://raw.githubusercontent.com/sarychief/tsa/main/photos/' + fileName + '/' + imgSrc;
+                            images.forEach(async function(img) {
+                              var imgSrc = img.getAttribute('src');
+                              var dataURL = await fetchDataURL('https://raw.githubusercontent.com/sarychief/tsa/main/photos/' + fileName + '/' + imgSrc);
+                              img.src = dataURL;
                             });
                         }, 100);
                     })
