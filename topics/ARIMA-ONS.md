@@ -22,8 +22,9 @@ $\prod^{A_t}_{\mathcal{K}}(y) = \arg\min_{x\in\mathcal{K}}(y-x)^{\top}A_t(y-x)$ 
 
 
 $\text{Algorithm 1 ARIMA-ONS(k, d, q)}$
-$\text{Input: parameter k, d, m; learning rate}\ \eta\text{; initial}(m + k) \times (m + k)\ \text{matrix}\ A_0$
-$\text{Set}\ m = \log_{\lambda_{\max}}((\text{TLM}_{\text{max}}q)^{-1})$
+$\text{Input: parameter k, d, m; learning rate } \eta$
+$\text{initial }(m + k) \times (m + k)\text{ matrix }A_0$
+$\text{Set }m = \log_{\lambda_{\max}}((\text{TLM}_{\text{max}}q)^{-1})$
 $\text{for t=1 to T-1 do}$
 $\text{predict }\tilde X_t(\gamma^t)= \sum^{k+m}_{i=1}\gamma_i\nabla^dX_{t-1}+\sum^{d-1}_{i=0}\nabla^iX_{t-1}$
 $\text{receive }X_t\text{ and incur loss } \ell^m_t(\gamma^t)$
@@ -39,7 +40,9 @@ $\text{end for}$
 ---
 ## Алгоритм
 
-Этот алгоритм представляет собой онлайн-оптимизацию параметров модели ARIMA (AutoRegressive Integrated Moving Average) с использованием метода оптимизации на основе шага Ньютона (ONS). Давайте разберем основные шаги алгоритма:
+Этот алгоритм представляет собой онлайн-оптимизацию параметров модели ARIMA (AutoRegressive Integrated Moving Average) с использованием метода оптимизации на основе шага Ньютона (ONS). 
+
+Основные шаги алгоритма:
 
 1. **Определение параметров:**
    - $\mathcal{K}$ - множество коэффициентов модели ARIMA$(m+k, d, 0)$, где $m$ - порядок авторегрессии, $k$ - порядок скользящего среднего, $d$ - порядок интегрирования.
