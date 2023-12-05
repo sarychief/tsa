@@ -23,11 +23,14 @@
             "id": "7e8d6fe18eb2d13a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "topics/ARIMA-ONS.md",
-                "mode": "source",
-                "source": false
+                "file": "Time_series_map.canvas",
+                "viewState": {
+                  "x": 2277.5,
+                  "y": 755.5,
+                  "zoom": -3.531935739209519
+                }
               }
             }
           }
@@ -98,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "topics/ARIMA-ONS.md",
+                "file": "Time_series_map.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "topics/ARIMA-ONS.md",
+                "file": "Time_series_map.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "topics/ARIMA-ONS.md"
+                "file": "Time_series_map.canvas"
               }
             }
           }
@@ -161,15 +164,16 @@
   },
   "active": "7e8d6fe18eb2d13a",
   "lastOpenFiles": [
-    "topics/ARIMA-OGD.md",
-    "topics/ARIMA-ONS.md",
-    "Time_series_map.canvas",
     "README.md",
+    "topics/ARIMA-ONS.md",
+    "Equation/Computer sciences/Data Science/§ Временные ряды/photos/Untitled.png.md",
+    "Daily/Декомпозиция.md",
+    "topics/ARIMA-OGD.md",
+    "Time_series_map.canvas",
     "Временные ряды.png",
     "Без названия.pdf",
     "Без названия.md",
     "topics/Периодограммы.md",
-    "Equation/Computer sciences/Data Science/§ Временные ряды/photos/Untitled.png.md",
     "Equation/Computer sciences/Data Science/§ Временные ряды/photos",
     "Equation/Computer sciences/Data Science/§ Временные ряды",
     "Equation/Computer sciences/Data Science",
@@ -177,7 +181,6 @@
     "Equation",
     "topics/Moving Average.md",
     "topics/MA.md",
-    "Daily/Декомпозиция.md",
     "Daily",
     "Time_series_map.canvas.sb-6e988788-1ePYJg",
     "topics/STL.md",
