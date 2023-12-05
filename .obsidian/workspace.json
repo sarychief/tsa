@@ -15,14 +15,30 @@
               "state": {
                 "file": "Time_series_map.canvas",
                 "viewState": {
-                  "x": 2510.1756663506103,
-                  "y": 723.7066783417961,
-                  "zoom": -2.430900726715723
+                  "x": 4284.643441734888,
+                  "y": 2867.741692953881,
+                  "zoom": -1.8008847522735596
+                }
+              }
+            }
+          },
+          {
+            "id": "7e8d6fe18eb2d13a",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Time_series_map.canvas",
+                "viewState": {
+                  "x": 2547.640557622535,
+                  "y": 1789.0601453518482,
+                  "zoom": -0.9405229517720811
                 }
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -149,10 +165,23 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "e5c23b6a0a6c1e14",
+  "active": "7e8d6fe18eb2d13a",
   "lastOpenFiles": [
-    "topics/MA.md",
+    "topics/ARIMA-OGD.md",
     "Time_series_map.canvas",
+    "Временные ряды.png",
+    "Без названия.md",
+    "Без названия.pdf",
+    "topics/ARIMA-ONS.md",
+    "topics/Периодограммы.md",
+    "Equation/Computer sciences/Data Science/§ Временные ряды/photos/Untitled.png.md",
+    "Equation/Computer sciences/Data Science/§ Временные ряды/photos",
+    "Equation/Computer sciences/Data Science/§ Временные ряды",
+    "Equation/Computer sciences/Data Science",
+    "Equation/Computer sciences",
+    "Equation",
+    "topics/Moving Average.md",
+    "topics/MA.md",
     "Daily/Декомпозиция.md",
     "Daily",
     "Time_series_map.canvas.sb-6e988788-1ePYJg",
@@ -160,7 +189,6 @@
     "topics/STL.md",
     "topics/SSA.md",
     "topics/SOTA.md",
-    "topics/Moving Average.md",
     "topics/KPSS-test.md",
     "topics/EMD.md",
     "topics/EEMD.md",
@@ -174,12 +202,6 @@
     "topics/Тест Кокса-Стюарта.md",
     "topics/Тест Дарбина-Уотсона.md",
     "topics/Статистические гипотезы.md",
-    "topics/Спектральный анализ.md",
-    "topics/Регрессионный анализ.md",
-    "topics/Проверка случайности остатков.md",
-    "topics/Проверка на стационарность.md",
-    "topics/Проверка мат. ожидания остатков.md",
-    "Временные ряды.canvas",
-    "Временные ряды.png"
+    "Временные ряды.canvas"
   ]
 }
