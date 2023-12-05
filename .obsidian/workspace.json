@@ -81,8 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "63336596e9f712a8",
@@ -162,11 +161,12 @@
   "active": "e5c23b6a0a6c1e14",
   "lastOpenFiles": [
     "Time_series_map.canvas",
-    "topics/ARIMA-ONS.md",
+    "README.md",
     "topics/ARIMA-OGD.md",
     "Временные ряды.png",
-    "Без названия.md",
     "Без названия.pdf",
+    "Без названия.md",
+    "topics/ARIMA-ONS.md",
     "topics/Периодограммы.md",
     "Equation/Computer sciences/Data Science/§ Временные ряды/photos/Untitled.png.md",
     "Equation/Computer sciences/Data Science/§ Временные ряды/photos",
@@ -179,7 +179,6 @@
     "Daily/Декомпозиция.md",
     "Daily",
     "Time_series_map.canvas.sb-6e988788-1ePYJg",
-    "README.md",
     "topics/STL.md",
     "topics/SSA.md",
     "topics/SOTA.md",
