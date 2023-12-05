@@ -31,7 +31,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -97,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "topics/ARIMA-OGD.md",
+                "file": "topics/ARIMA-ONS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "topics/ARIMA-OGD.md",
+                "file": "topics/ARIMA-ONS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "topics/ARIMA-OGD.md"
+                "file": "topics/ARIMA-ONS.md"
               }
             }
           }
@@ -158,11 +159,11 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "e5c23b6a0a6c1e14",
+  "active": "7e8d6fe18eb2d13a",
   "lastOpenFiles": [
+    "topics/ARIMA-OGD.md",
     "Time_series_map.canvas",
     "README.md",
-    "topics/ARIMA-OGD.md",
     "Временные ряды.png",
     "Без названия.pdf",
     "Без названия.md",

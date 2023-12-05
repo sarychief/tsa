@@ -21,15 +21,15 @@ $\prod^{A_t}_{\mathcal{K}}(y) = \arg\min_{x\in\mathcal{K}}(y-x)^{\top}A_t(y-x)$ 
 Обратная матрица находится с помощью формулы Шермана-Моррисона
 
 
-$\text{Algorithm 1 ARIMA-ONS(k, d, q)}$\
-$\text{Input: parameter k, d, m; learning rate}\ \eta\text{; initial}(m + k) \times (m + k)\ \text{matrix}\ A_0$\
-$\text{Set}\ m = \log_{\lambda_{\max}}((\text{TLM}_{\text{max}}q)^{-1})$\
-$\text{for t=1 to T-1 do}$\
-$\text{predict }\tilde X_t(\gamma^t)= \sum^{k+m}_{i=1}\gamma_i\nabla^dX_{t-1}+\sum^{d-1}_{i=0}\nabla^iX_{t-1};$\
-$\text{receive }X_t\text{ and incur loss } \ell^m_t(\gamma^t);$\
-$\text{Let }\nabla_t = \nabla\ell^m_t(\gamma^t), \text{update} A_t \leftarrow A_{t-1} + \nabla_t\nabla^{\top}_t;$\
-$\text{Set }\gamma^{t+1}\leftarrow\prod^{t_t}_{\mathcal{K}}(\gamma^t - \frac{1}{\eta}A^{-1}_t\nabla_t);$\
-$\text{end for}$\
+$\text{Algorithm 1 ARIMA-ONS(k, d, q)}$
+$\text{Input: parameter k, d, m; learning rate}\ \eta\text{; initial}(m + k) \times (m + k)\ \text{matrix}\ A_0$
+$\text{Set}\ m = \log_{\lambda_{\max}}((\text{TLM}_{\text{max}}q)^{-1})$
+$\text{for t=1 to T-1 do}$
+$\text{predict }\tilde X_t(\gamma^t)= \sum^{k+m}_{i=1}\gamma_i\nabla^dX_{t-1}+\sum^{d-1}_{i=0}\nabla^iX_{t-1}$
+$\text{receive }X_t\text{ and incur loss } \ell^m_t(\gamma^t)$
+$\text{Let }\nabla_t = \nabla\ell^m_t(\gamma^t), \text{update} A_t \leftarrow A_{t-1} + \nabla_t\nabla^{\top}_t$
+$\text{Set }\gamma^{t+1}\leftarrow\prod^{t_t}_{\mathcal{K}}(\gamma^t - \frac{1}{\eta}A^{-1}_t\nabla_t)$
+$\text{end for}$
 
 
 
