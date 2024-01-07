@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Временные ряды</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2103/2103658.png" type="image/x-icon">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.1/sigma.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.1.3/marked.min.js"></script>
+  <script type="text/x-mathjax-config">
+  MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"]],
+        processEscapes: true,
+      }
+    }
+  </script>
+  <link href="./main.css" rel="stylesheet">
+</head>
+<body>
+  <a href="https://github.com/sarychief/tsa/tree/main" target="_self" id="githubLogo">
+     <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Logo">
+  </a>
+
+  <header>
+      <h1>Интерактивный граф | Временные ряды</h1>
+  </header>
+  <main>
+      <div id="container">
+          <div id="myGraph"> <!-- Graph --> </div>
+      </div>
+      <div id="file-text-container">
+        <div id="file-text"> <!-- File text --> </div>
+        <button class="button-delete-file">Удалить <img src="./images/delete.png" alt="cross"></button>
+        <button class="button-close"><img src="./images/cross.png" alt="cross"></button>
+      </div>
+  </main>
+  <footer>
+      <p>© 2023 НИРС РК6: rndtsaada</p>
+  </footer>
+
+  <script src="graph.js"></script>
+</body>
+</html>

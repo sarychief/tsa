@@ -8,34 +8,14 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e5c23b6a0a6c1e14",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "topics/ARIMA-OGD.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "7e8d6fe18eb2d13a",
             "type": "leaf",
             "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Time_series_map.canvas",
-                "viewState": {
-                  "x": 2277.5,
-                  "y": 755.5,
-                  "zoom": -3.531935739209519
-                }
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -101,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Time_series_map.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Time_series_map.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Time_series_map.canvas"
-              }
+              "state": {}
             }
           }
         ]
@@ -164,41 +140,54 @@
   },
   "active": "7e8d6fe18eb2d13a",
   "lastOpenFiles": [
-    "README.md",
-    "topics/ARIMA-ONS.md",
-    "Equation/Computer sciences/Data Science/§ Временные ряды/photos/Untitled.png.md",
-    "Daily/Декомпозиция.md",
-    "topics/ARIMA-OGD.md",
+    "node_modules/semver/README.md",
+    "node_modules/semver/package.json",
+    "node_modules/semver/bin/semver.js",
+    "node_modules/semver/bin",
+    "node_modules/semver/preload.js",
+    "node_modules/semver/index.js",
+    "node_modules/semver/ranges/valid.js",
+    "node_modules/semver/ranges/to-comparators.js",
+    "node_modules/semver/ranges/subset.js",
+    "node_modules/semver/ranges/simplify.js",
+    "node_modules/semver/ranges/outside.js",
+    "node_modules/pstree.remy/README.md",
+    "node_modules/supports-color/readme.md",
+    "node_modules/simple-update-notifier/README.md",
+    "node_modules/undefsafe/README.md",
+    "node_modules/ignore-by-default/README.md",
+    "node_modules/anymatch/README.md",
+    "node_modules/touch/README.md",
+    "node_modules/minimatch/README.md",
+    "node_modules/braces/README.md",
+    "node_modules/nodemon/node_modules/ms/readme.md",
+    "node_modules/nodemon/node_modules/ms/license.md",
+    "node_modules/nodemon/node_modules/debug/README.md",
+    "node_modules/nodemon/README.md",
+    "node_modules/chokidar/README.md",
+    "node_modules/abbrev/README.md",
+    "node_modules/nopt/README.md",
+    "node_modules/is-number/README.md",
+    "node_modules/has-flag/readme.md",
+    "node_modules/yallist/README.md",
+    "node_modules/lru-cache/README.md",
+    "node_modules/balanced-match/README.md",
+    "node_modules/balanced-match/LICENSE.md",
+    "node_modules/brace-expansion/README.md",
+    "node_modules/is-extglob/README.md",
+    "node_modules/binary-extensions/readme.md",
+    "public_backend/images/delete.png",
+    "public_backend/images/cross.png",
+    "public_back/images/delete.png",
+    "public_back/images/cross.png",
+    "public copy/images/delete.png",
+    "public copy/images/cross.png",
+    "public/images/delete.png",
+    "public/images/delete.PNG",
+    "public/images/IMG_3593.PNG",
+    "public/images/cross.png",
+    "graph-data.canvas",
     "Time_series_map.canvas",
-    "Временные ряды.png",
-    "Без названия.pdf",
-    "Без названия.md",
-    "topics/Периодограммы.md",
-    "Equation/Computer sciences/Data Science/§ Временные ряды/photos",
-    "Equation/Computer sciences/Data Science/§ Временные ряды",
-    "Equation/Computer sciences/Data Science",
-    "Equation/Computer sciences",
-    "Equation",
-    "topics/Moving Average.md",
-    "topics/MA.md",
-    "Daily",
-    "Time_series_map.canvas.sb-6e988788-1ePYJg",
-    "topics/STL.md",
-    "topics/SSA.md",
-    "topics/SOTA.md",
-    "topics/KPSS-test.md",
-    "topics/EMD.md",
-    "topics/EEMD.md",
-    "topics/CEEMD.md",
-    "topics/ARMA.md",
-    "topics/ARIMA.md",
-    "topics/AR.md",
-    "topics/экспоненциальное сглаживание.md",
-    "topics/Формула Дарби.md",
-    "topics/Уравнение Юлы-Уокера.md",
-    "topics/Тест Кокса-Стюарта.md",
-    "topics/Тест Дарбина-Уотсона.md",
-    "topics/Статистические гипотезы.md",
     "Временные ряды.canvas"
   ]
 }
