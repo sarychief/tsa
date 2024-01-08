@@ -39,10 +39,29 @@ app.get('/topics/:fileName', async (req, res) => {
 
 app.delete('/topics/:fileName', async (req, res) => {
     try {
+        // удаление файла узла из топикс
         const fileName = req.params.fileName;
+
         const deleteResult = await DBCollections.topics.deleteOne({ filename: fileName });
+
         if (deleteResult.deletedCount === 1) {
-            // TODO: ТУТ НАДО УДАЛИТЬ ЭТОТ УЗЕЛ ИЗ ГРАФА)1 ЕБИСЬ))
+            // удаление ребра и узла(ов) из графа
+            // Найти узел по значению file в nodes
+            const graphData = await DBCollections.graph.findOne();
+            const deletedNode = graphData.data.nodes.find(node => node.file === `topics/${fileName}`);
+
+            if (!deletedNode) {
+                res.status(404).json({ error: 'Node not found' });
+                return;
+            }
+            // Удаление узла из nodes
+            const nodes = graphData.data.nodes.filter(node => node.id !== deletedNode.id);
+
+            // Удаление связанных ребер из edges
+            const edges = graphData.data.edges.filter(edge => edge.fromNode !== deletedNode.id && edge.toNode !== deletedNode.id);
+
+            // Обновление графа в базе данных
+            await DBCollections.graph.updateOne({}, { $set: { "data.nodes": nodes, "data.edges": edges } });
             res.status(200).end();
             return;
         }
