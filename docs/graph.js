@@ -23,7 +23,7 @@ class API_class {
         return this._request('DELETE', path, isText);
     }
 }
-const API = new API_class('/public');
+const API = new API_class('.');
 // const API = new API_class('http://localhost:3000');
 import graphData from './graph-data-frontend.js';
 
