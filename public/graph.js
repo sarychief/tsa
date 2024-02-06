@@ -23,8 +23,9 @@ class API_class {
         return this._request('DELETE', path, isText);
     }
 }
-const API = new API_class();
+const API = new API_class('/public');
 // const API = new API_class('http://localhost:3000');
+import graphData from './graph-data-frontend.js';
 
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -32,16 +33,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         fileTextContainer: document.getElementById('file-text-container'),
         fileText: document.getElementById('file-text'),
     }
-    let selectedFileName = location.pathname.replace(/^\//g, '');
-    console.log(selectedFileName);
-    if (selectedFileName === '' || selectedFileName === '/') {
-        selectedFileName = null;
-    } else {
-        showFile(selectedFileName);
-    }
-    console.log(selectedFileName);
+    let selectedFileName; //= location.pathname.replace(/^\//g, '');
+    // console.log(selectedFileName);
+    // if (selectedFileName === '' || selectedFileName === '/') {
+    //     selectedFileName = null;
+    // } else {
+    //     showFile(selectedFileName);
+    // }
+    // console.log(selectedFileName);
 
-    const graphData = await API.get('/graph-data');
+    // const graphData = await API.get('/graph-data');
     var s = new sigma('myGraph');
 
     s.settings({
@@ -104,7 +105,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         saveSelectedFileName();
 
         // Проверка существования файла перед загрузкой
-        let md = await API.get(`/topics/${selectedFileName}`, true);
+        let md = await API.get(`/topics_frontend/${selectedFileName}`, true);
         md = md.replace(/\$(.*)\$/g, "\\\\($1\\\\)");
         md = md.replace(/\!\[.*\]\((.+)\)/g, "![](/photos/$1)");
         md = md.replace(/\!\[\[(.+)\]\]/g, "![](/photos/$1)");
@@ -130,10 +131,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 
     function saveSelectedFileName() {
-        if (!selectedFileName) {
-            window.history.pushState(null, 'Home', '/');
-            return;
-        }
-        window.history.pushState(null, 'File - ' + selectedFileName, location.origin + '/' + selectedFileName);
+        // if (!selectedFileName) {
+        //     window.history.pushState(null, 'Home', '/');
+        //     return;
+        // }
+        // window.history.pushState(null, 'File - ' + selectedFileName, location.origin + '/' + selectedFileName);
     }
 });

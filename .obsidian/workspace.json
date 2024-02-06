@@ -11,11 +11,40 @@
             "id": "7e8d6fe18eb2d13a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "public/topics_frontend/SSA.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1ed5d360bee84ca6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Без названия.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2a0ab35b9cb51919",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "public/topics_frontend/Поиск параметров AR.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -65,7 +94,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 466.5004348754883
   },
   "right": {
     "id": "63336596e9f712a8",
@@ -81,6 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "public/topics_frontend/Поиск параметров AR.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "public/topics_frontend/Поиск параметров AR.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +149,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "public/topics_frontend/Поиск параметров AR.md"
+              }
             }
           }
         ]
@@ -138,8 +171,30 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "7e8d6fe18eb2d13a",
+  "active": "2a0ab35b9cb51919",
   "lastOpenFiles": [
+    "public/topics_frontend/Методика Бокса-Дженкинса.md",
+    "public/topics_frontend/Метод Фишера + метод Стьюдента.md",
+    "public/topics_frontend/Метод Ирвина.md",
+    "public/topics_frontend/Критерий серии, на основе медианы.md",
+    "public/topics_frontend/Критерий поворотных точек.md",
+    "public/topics_frontend/Выделение тренда сглаживания.md",
+    "public/topics_frontend/Выделение тренда.md",
+    "public/topics_frontend/Выделение сезонных и периодических составляющих.md",
+    "public/topics_frontend/Вейвлет разложение.md",
+    "public/topics_frontend/Аналитика.md",
+    "public/topics_frontend/Автокорреляция.md",
+    "public/topics_frontend/Поиск параметров ARIMA.md",
+    "Без названия 1.md",
+    "public/topics_frontend/экспоненциальное сглаживание.md",
+    "public/topics_frontend/Moving Average.md",
+    "Без названия.md",
+    "public/topics_frontend/SSA.md",
+    "public/topics_frontend/ARIMA-OGD.md",
+    "public/topics_frontend/ARIMA.md",
+    "public/topics_frontend/Уравнение Юлы-Уокера.md",
+    "public/topics_frontend/Поиск параметров MA.md",
+    "public/topics_frontend/Приближенный алгоритм.md",
     "node_modules/semver/README.md",
     "node_modules/semver/package.json",
     "node_modules/semver/bin/semver.js",
@@ -154,28 +209,6 @@
     "node_modules/pstree.remy/README.md",
     "node_modules/supports-color/readme.md",
     "node_modules/simple-update-notifier/README.md",
-    "node_modules/undefsafe/README.md",
-    "node_modules/ignore-by-default/README.md",
-    "node_modules/anymatch/README.md",
-    "node_modules/touch/README.md",
-    "node_modules/minimatch/README.md",
-    "node_modules/braces/README.md",
-    "node_modules/nodemon/node_modules/ms/readme.md",
-    "node_modules/nodemon/node_modules/ms/license.md",
-    "node_modules/nodemon/node_modules/debug/README.md",
-    "node_modules/nodemon/README.md",
-    "node_modules/chokidar/README.md",
-    "node_modules/abbrev/README.md",
-    "node_modules/nopt/README.md",
-    "node_modules/is-number/README.md",
-    "node_modules/has-flag/readme.md",
-    "node_modules/yallist/README.md",
-    "node_modules/lru-cache/README.md",
-    "node_modules/balanced-match/README.md",
-    "node_modules/balanced-match/LICENSE.md",
-    "node_modules/brace-expansion/README.md",
-    "node_modules/is-extglob/README.md",
-    "node_modules/binary-extensions/readme.md",
     "public_backend/images/delete.png",
     "public_backend/images/cross.png",
     "public_back/images/delete.png",
