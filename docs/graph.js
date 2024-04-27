@@ -3,13 +3,25 @@ class API_class {
         this.basePath = basePath ? basePath : location.origin;
     }
     
+    // async _request(method, path, isText=false) {
+    //     const res = await (fetch(this.basePath + path, {method: method, mode: 'cors', credentials: 'include'}));
+    //     if (isText) {
+    //         return res.text();
+    //     }
+    //     return res.json();
+    // }
+
     async _request(method, path, isText=false) {
-        const res = await (fetch(this.basePath + path, {method: method, mode: 'cors', credentials: 'include'}));
+        const res = await fetch(this.basePath + path, {method: method, mode: 'cors', credentials: 'include'});
+        if (!res.ok) {
+            throw new Error(`Ошибка ${res.status}: ${res.statusText}`);
+        }
         if (isText) {
             return res.text();
         }
         return res.json();
     }
+    
     get(path, isText=false) {
         return this._request('GET', path, isText);
     }
@@ -100,20 +112,45 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     s.refresh();
 
+    // async function showFile(fileName) {
+    //     selectedFileName = fileName;
+    //     saveSelectedFileName();
+
+    //     // Проверка существования файла перед загрузкой
+    //     let md = await API.get(`/topics_frontend/${selectedFileName}`, true);
+    //     console.log('md:', md)
+    //     md = md.replace(/\$(.*)\$/g, "\\\\($1\\\\)");
+    //     md = md.replace(/\!\[.*\]\((.+)\)/g, "![](/photos/$1)");
+    //     md = md.replace(/\!\[\[(.+)\]\]/g, "![](/photos/$1)");
+    //     Elements.fileText.innerHTML = marked(md); 
+    //     MathJax.typesetPromise([Elements.fileText]);
+    //     Elements.fileTextContainer.classList.add('shown');
+    // } 
+
     async function showFile(fileName) {
         selectedFileName = fileName;
         saveSelectedFileName();
-
-        // Проверка существования файла перед загрузкой
-        let md = await API.get(`/topics_frontend/${selectedFileName}`, true);
-        console.log('md:', md)
-        md = md.replace(/\$(.*)\$/g, "\\\\($1\\\\)");
-        md = md.replace(/\!\[.*\]\((.+)\)/g, "![](/photos/$1)");
-        md = md.replace(/\!\[\[(.+)\]\]/g, "![](/photos/$1)");
-        Elements.fileText.innerHTML = marked(md); 
-        MathJax.typesetPromise([Elements.fileText]);
-        Elements.fileTextContainer.classList.add('shown');
+    
+        try {
+            // Попытка загрузки файла
+            let md = await API.get(`/topics_frontend/${selectedFileName}`, true);
+            console.log('md:', md)
+            md = md.replace(/\$(.*)\$/g, "\\\\($1\\\\)");
+            md = md.replace(/\!\[.*\]\((.+)\)/g, "![](/photos/$1)");
+            md = md.replace(/\!\[\[(.+)\]\]/g, "![](/photos/$1)");
+            Elements.fileText.innerHTML = marked(md); 
+            MathJax.typesetPromise([Elements.fileText]);
+            Elements.fileTextContainer.classList.add('shown');
+        } catch (error) {
+            // Если возникла ошибка, выводим сообщение "Пока не написано :("
+            console.error('Ошибка загрузки файла:', error);
+            Elements.fileText.innerHTML = "Пока не написано :(";
+            Elements.fileTextContainer.classList.add('shown');
+        }
     }
+    
+    
+    
 
     s.bind('clickNode', (e) => {
         const fileName = e.data.node.label;

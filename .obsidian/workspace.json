@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/topics_frontend/Выделение тренда.md",
+                "file": "docs/topics_frontend/Метод Ирвина.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/topics_frontend/Выделение тренда.md",
+                "file": "docs/topics_frontend/Метод Ирвина.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/topics_frontend/Выделение тренда.md",
+                "file": "docs/topics_frontend/Метод Ирвина.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/topics_frontend/Выделение тренда.md"
+                "file": "docs/topics_frontend/Метод Ирвина.md"
               }
             }
           }
@@ -148,10 +148,11 @@
   },
   "active": "5ced857c0f1a1592",
   "lastOpenFiles": [
-    "docs/topics_frontend/Выделение сезонных и периодических составляющих.md",
     "docs/topics_frontend/Вейвлет разложение.md",
     "docs/topics_frontend/Аналитика.md",
     "docs/topics_frontend/Автокорреляция.md",
+    "docs/topics_frontend/Выделение сезонных и периодических составляющих.md",
+    "docs/topics_frontend/Выделение тренда.md",
     "docs/topics_frontend/Спектральный анализ.md",
     "docs/graph-data-frontend.canvas",
     "docs/topics_frontend/Поиск параметров AR.md",
@@ -173,7 +174,6 @@
     "docs/topics_frontend/Критерий поворотных точек.md",
     "docs/topics_frontend/Критерий Колмогорова-Смирнова.md",
     "docs/topics_frontend/Выделение тренда сглаживания.md",
-    "docs/topics_frontend/Выделение тренда.md",
     "public/topics_frontend/Методика Бокса-Дженкинса.md",
     "public/topics_frontend/Метод Фишера + метод Стьюдента.md",
     "node_modules/semver/package.json",
