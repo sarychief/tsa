@@ -1,3 +1,4 @@
-Надо решить: $\color{white}\phi(B)\tilde z_t = \theta(B)a_t​$
+# Поиск параметров ARMA
 
-- [[Методика Бокса-Дженкинса]]
+Надо решить: $\phi(B)\tilde z_t = \theta(B)a_t​$
+

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/topics_frontend/Метод Ирвина.md",
+                "file": "docs/topics_frontend/ARIMA-OGD.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/topics_frontend/Метод Ирвина.md",
+                "file": "docs/topics_frontend/ARIMA-OGD.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/topics_frontend/Метод Ирвина.md",
+                "file": "docs/topics_frontend/ARIMA-OGD.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/topics_frontend/Метод Ирвина.md"
+                "file": "docs/topics_frontend/ARIMA-OGD.md"
               }
             }
           }
@@ -148,14 +148,28 @@
   },
   "active": "5ced857c0f1a1592",
   "lastOpenFiles": [
+    "docs/topics_frontend/ARIMA-ONS.md",
+    "photos/ons.png",
+    "photos/ogd.png",
+    "docs/topics_frontend/Уравнение Юлы-Уокера.md",
+    "docs/topics_frontend/Поиск параметров ARIMA.md",
+    "photos/arima_find_params.png",
+    "Pasted image 20240427213256.png",
+    "docs/topics_frontend/Поиск параметров ARMA.md",
+    "docs/topics_frontend/Поиск параметров MA.md",
+    "docs/topics_frontend/Поиск параметров AR.md",
+    "docs/topics_frontend/MA.md",
+    "docs/topics_frontend/AR.md",
+    "docs/graph-data-frontend.canvas",
+    "docs/images/404.gif",
+    "docs/topics_frontend/STL.md",
+    "docs/topics_frontend/Метод Ирвина.md",
     "docs/topics_frontend/Вейвлет разложение.md",
     "docs/topics_frontend/Аналитика.md",
     "docs/topics_frontend/Автокорреляция.md",
     "docs/topics_frontend/Выделение сезонных и периодических составляющих.md",
     "docs/topics_frontend/Выделение тренда.md",
     "docs/topics_frontend/Спектральный анализ.md",
-    "docs/graph-data-frontend.canvas",
-    "docs/topics_frontend/Поиск параметров AR.md",
     "docs/topics_frontend/ARIMA-OGD.md",
     "Без названия 2.md",
     "docs/topics_frontend/Метод Фишера + метод Стьюдента.md",
@@ -165,17 +179,7 @@
     "topics",
     "rndtsa_ada_2023_rk6_72b_NaumkinRU_nirs.md",
     "node_modules/@mongodb-js/saslprep/readme.md",
-    "docs/topics_frontend/ARIMA-ONS.md",
     "Без названия 1.md",
-    "docs/topics_frontend/Метод Ирвина.md",
-    "docs/topics_frontend/Тест Дарбина-Уотсона.md",
-    "Без названия.md",
-    "docs/topics_frontend/Критерий серии, на основе медианы.md",
-    "docs/topics_frontend/Критерий поворотных точек.md",
-    "docs/topics_frontend/Критерий Колмогорова-Смирнова.md",
-    "docs/topics_frontend/Выделение тренда сглаживания.md",
-    "public/topics_frontend/Методика Бокса-Дженкинса.md",
-    "public/topics_frontend/Метод Фишера + метод Стьюдента.md",
     "node_modules/semver/package.json",
     "node_modules/semver/bin/semver.js",
     "node_modules/semver/bin",
@@ -190,11 +194,6 @@
     "public_back/images/delete.png",
     "public_back/images/cross.png",
     "public copy/images/delete.png",
-    "public copy/images/cross.png",
-    "public/images/delete.png",
-    "public/images/delete.PNG",
-    "public/images/IMG_3593.PNG",
-    "public/images/cross.png",
     "graph-data.canvas",
     "Time_series_map.canvas",
     "Временные ряды.canvas"

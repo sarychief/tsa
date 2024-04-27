@@ -6,15 +6,7 @@
 - хуже по качеству относительно ONS
 - лучше в скорости вычислений относительно ONS
 
-$\text{Algorithm 2 ARIMA-OGD(k,d,q)}$ 
-$\text{Input: parameter k, d, q; learning rate } \eta$
-$\text{Set } m = \log_{\lambda_{\max}} ((TLM_{max}q)^{−1})$
-$\text{for t=1 to T − 1 do}$ 
-$\text{predict } \tilde X_t(\gamma^t) = \sum^{k+m}_{i=1}\gamma_i\nabla^dX_{t-i} + \sum^{d-1}_{i=0}\nabla^iX_{t-1}$
-$\text{receive } X_t \text{ and incur loss } \ell^m_t(\gamma^t)$ 
-$\text{Let }\nabla_t = \nabla\ell^m_t(\gamma^t)$
-$\text{Set }\gamma^{t+1} \leftarrow \prod_{\mathcal{K}}(\gamma^t - \frac{1}{\eta}\nabla_t)$ 
-$\text{end for}$
+![](ogd.png)
 
 ---
 

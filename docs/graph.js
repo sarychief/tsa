@@ -2,14 +2,6 @@ class API_class {
     constructor(basePath) {
         this.basePath = basePath ? basePath : location.origin;
     }
-    
-    // async _request(method, path, isText=false) {
-    //     const res = await (fetch(this.basePath + path, {method: method, mode: 'cors', credentials: 'include'}));
-    //     if (isText) {
-    //         return res.text();
-    //     }
-    //     return res.json();
-    // }
 
     async _request(method, path, isText=false) {
         const res = await fetch(this.basePath + path, {method: method, mode: 'cors', credentials: 'include'});
@@ -37,6 +29,7 @@ class API_class {
 }
 const API = new API_class('.');
 // const graphData = await API.get('/graph-data-frontend.json');
+// import graphData from './graph-data-frontend.canvas';
 import graphData from './graph-data-frontend.js';
 console.log(graphData.nodes);
 
@@ -45,16 +38,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         fileTextContainer: document.getElementById('file-text-container'),
         fileText: document.getElementById('file-text'),
     }
-    let selectedFileName;//= location.pathname.replace(/^\//g, '');
-    // console.log(selectedFileName);
-    // if (selectedFileName === '' || selectedFileName === '/') {
-    //     selectedFileName = null;
-    // } else {
-    //     showFile(selectedFileName);
-    // }
-    // console.log(selectedFileName);
-
-    // const graphData = await API.get('/graph-data');
+    let selectedFileName;
     var s = new sigma('myGraph');
 
     s.settings({
@@ -67,7 +51,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             context.font = (settings('fontStyle') ? settings('fontStyle') + ' ' : '') + fontSize + 'px ' + (settings('font') || 'serif');
             context.fillStyle = node.color || settings('defaultNodeColor');
 
-            // Set background color
             context.fillRect(
                 Math.round(node[prefix + 'x'] - fontSize / 2 - 2), 
                 Math.round(node[prefix + 'y'] - fontSize / 2 - 2),
@@ -115,17 +98,24 @@ document.addEventListener('DOMContentLoaded', async () => {
     // async function showFile(fileName) {
     //     selectedFileName = fileName;
     //     saveSelectedFileName();
-
-    //     // Проверка существования файла перед загрузкой
-    //     let md = await API.get(`/topics_frontend/${selectedFileName}`, true);
-    //     console.log('md:', md)
-    //     md = md.replace(/\$(.*)\$/g, "\\\\($1\\\\)");
-    //     md = md.replace(/\!\[.*\]\((.+)\)/g, "![](/photos/$1)");
-    //     md = md.replace(/\!\[\[(.+)\]\]/g, "![](/photos/$1)");
-    //     Elements.fileText.innerHTML = marked(md); 
-    //     MathJax.typesetPromise([Elements.fileText]);
-    //     Elements.fileTextContainer.classList.add('shown');
-    // } 
+    
+    //     try {
+    //         // Попытка загрузки файла
+    //         let md = await API.get(`/topics_frontend/${selectedFileName}`, true);
+    //         console.log('md:', md)
+    //         md = md.replace(/\$(.*)\$/g, "\\\\($1\\\\)");
+    //         md = md.replace(/\!\[.*\]\((.+)\)/g, "![](/photos/$1)");
+    //         md = md.replace(/\!\[\[(.+)\]\]/g, "![](/photos/$1)");
+    //         Elements.fileText.innerHTML = marked(md); 
+    //         MathJax.typesetPromise([Elements.fileText]);
+    //         Elements.fileTextContainer.classList.add('shown');
+    //     } catch (error) {
+    //         // Если возникла ошибка, выводим сообщение "Пока не написано :("
+    //         console.error('Ошибка загрузки файла:', error);
+    //         Elements.fileText.innerHTML = "Пока не написано :(";
+    //         Elements.fileTextContainer.classList.add('shown');
+    //     }
+    // }
 
     async function showFile(fileName) {
         selectedFileName = fileName;
@@ -135,8 +125,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             // Попытка загрузки файла
             let md = await API.get(`/topics_frontend/${selectedFileName}`, true);
             console.log('md:', md)
-            md = md.replace(/\$(.*)\$/g, "\\\\($1\\\\)");
-            md = md.replace(/\!\[.*\]\((.+)\)/g, "![](/photos/$1)");
+            md = md.replace(/\$\$(.*?)\$\$/g, "\\\\[$1\\\\]"); // замена $$ формул на \[ \]
+            md = md.replace(/\$(.*?)\$/g, "\\\\($1\\\\)"); // замена $ формул на \( \)
+            md = md.replace(/\!\[.*\]\((.+)\)/g, "![](/photos/$1)"); // замена изображений на правильные пути
             md = md.replace(/\!\[\[(.+)\]\]/g, "![](/photos/$1)");
             Elements.fileText.innerHTML = marked(md); 
             MathJax.typesetPromise([Elements.fileText]);
@@ -150,7 +141,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     
     
-    
+
 
     s.bind('clickNode', (e) => {
         const fileName = e.data.node.label;

@@ -6,7 +6,6 @@
 		{"id":"75866b5fef228605","type":"file","file":"./topics_frontend/Адаптивный анализ.md","x":859,"y":2640,"width":380,"height":60},
 		{"id":"35e5f353321c3e1c","type":"text","text":"Модели","x":1131,"y":780,"width":250,"height":60},
 		{"id":"c6c9c5ecefc6dbc7","type":"text","text":"Статистические методы","x":2115,"y":965,"width":290,"height":50},
-		{"id":"79d1aee79a087ad6","type":"text","text":"если распределение лог нормальное то бокса-кокса","x":-57,"y":2255,"width":250,"height":60},
 		{"id":"2a97aa929ac68419","type":"text","text":"PACF","x":2409,"y":-2040,"width":105,"height":50},
 		{"id":"8266db24cb6897ea","type":"text","text":"ACF","x":2412,"y":-2400,"width":102,"height":50},
 		{"id":"0cb38af75e766f6d","type":"file","file":"./topics_frontend/Периодограммы.md","x":2632,"y":-1621,"width":330,"height":50,"color":"5"},
