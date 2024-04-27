@@ -24,16 +24,16 @@ class API_class {
     }
 }
 const API = new API_class('.');
-// const API = new API_class('http://localhost:3000');
+// const graphData = await API.get('/graph-data-frontend.json');
 import graphData from './graph-data-frontend.js';
-
+console.log(graphData.nodes);
 
 document.addEventListener('DOMContentLoaded', async () => {
     const Elements = {
         fileTextContainer: document.getElementById('file-text-container'),
         fileText: document.getElementById('file-text'),
     }
-    let selectedFileName; //= location.pathname.replace(/^\//g, '');
+    let selectedFileName;//= location.pathname.replace(/^\//g, '');
     // console.log(selectedFileName);
     // if (selectedFileName === '' || selectedFileName === '/') {
     //     selectedFileName = null;
@@ -106,6 +106,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         // Проверка существования файла перед загрузкой
         let md = await API.get(`/topics_frontend/${selectedFileName}`, true);
+        console.log('md:', md)
         md = md.replace(/\$(.*)\$/g, "\\\\($1\\\\)");
         md = md.replace(/\!\[.*\]\((.+)\)/g, "![](/photos/$1)");
         md = md.replace(/\!\[\[(.+)\]\]/g, "![](/photos/$1)");

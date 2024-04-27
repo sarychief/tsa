@@ -4,47 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "49245fa4fd0cc596",
+        "id": "e40e293e5a4337c5",
         "type": "tabs",
         "children": [
           {
-            "id": "7e8d6fe18eb2d13a",
+            "id": "5ced857c0f1a1592",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "public/topics_frontend/SSA.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1ed5d360bee84ca6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Без названия.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2a0ab35b9cb51919",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "public/topics_frontend/Поиск параметров AR.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -94,7 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 466.5004348754883
+    "width": 200
   },
   "right": {
     "id": "63336596e9f712a8",
@@ -110,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "public/topics_frontend/Поиск параметров AR.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "public/topics_frontend/Поиск параметров AR.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "public/topics_frontend/Поиск параметров AR.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -171,31 +138,35 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "2a0ab35b9cb51919",
+  "active": "5ced857c0f1a1592",
   "lastOpenFiles": [
+    "docs/topics_frontend/ARIMA-OGD.md",
+    "docs/graph-data-frontend.canvas",
+    "Без названия 2.md",
+    "docs/topics_frontend/Метод Фишера + метод Стьюдента.md",
+    "docs/topics_frontend/Методика Бокса-Дженкинса.md",
+    "README.md",
+    "topics/Критерий серии, на основе медианы.md",
+    "topics",
+    "rndtsa_ada_2023_rk6_72b_NaumkinRU_nirs.md",
+    "node_modules/@mongodb-js/saslprep/readme.md",
+    "docs/topics_frontend/ARIMA-ONS.md",
+    "Без названия 1.md",
+    "docs/topics_frontend/Метод Ирвина.md",
+    "docs/topics_frontend/Тест Дарбина-Уотсона.md",
+    "Без названия.md",
+    "docs/topics_frontend/Критерий серии, на основе медианы.md",
+    "docs/topics_frontend/Критерий поворотных точек.md",
+    "docs/topics_frontend/Критерий Колмогорова-Смирнова.md",
+    "docs/topics_frontend/Выделение тренда сглаживания.md",
+    "docs/topics_frontend/Выделение тренда.md",
+    "docs/topics_frontend/Аналитика.md",
+    "docs/topics_frontend/Автокорреляция.md",
     "public/topics_frontend/Методика Бокса-Дженкинса.md",
     "public/topics_frontend/Метод Фишера + метод Стьюдента.md",
     "public/topics_frontend/Метод Ирвина.md",
     "public/topics_frontend/Критерий серии, на основе медианы.md",
     "public/topics_frontend/Критерий поворотных точек.md",
-    "public/topics_frontend/Выделение тренда сглаживания.md",
-    "public/topics_frontend/Выделение тренда.md",
-    "public/topics_frontend/Выделение сезонных и периодических составляющих.md",
-    "public/topics_frontend/Вейвлет разложение.md",
-    "public/topics_frontend/Аналитика.md",
-    "public/topics_frontend/Автокорреляция.md",
-    "public/topics_frontend/Поиск параметров ARIMA.md",
-    "Без названия 1.md",
-    "public/topics_frontend/экспоненциальное сглаживание.md",
-    "public/topics_frontend/Moving Average.md",
-    "Без названия.md",
-    "public/topics_frontend/SSA.md",
-    "public/topics_frontend/ARIMA-OGD.md",
-    "public/topics_frontend/ARIMA.md",
-    "public/topics_frontend/Уравнение Юлы-Уокера.md",
-    "public/topics_frontend/Поиск параметров MA.md",
-    "public/topics_frontend/Приближенный алгоритм.md",
-    "node_modules/semver/README.md",
     "node_modules/semver/package.json",
     "node_modules/semver/bin/semver.js",
     "node_modules/semver/bin",
@@ -205,10 +176,6 @@
     "node_modules/semver/ranges/to-comparators.js",
     "node_modules/semver/ranges/subset.js",
     "node_modules/semver/ranges/simplify.js",
-    "node_modules/semver/ranges/outside.js",
-    "node_modules/pstree.remy/README.md",
-    "node_modules/supports-color/readme.md",
-    "node_modules/simple-update-notifier/README.md",
     "public_backend/images/delete.png",
     "public_backend/images/cross.png",
     "public_back/images/delete.png",
