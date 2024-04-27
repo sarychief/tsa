@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/topics_frontend/ARIMA-OGD.md",
+                "file": "docs/topics_frontend/ARIMA-ONS.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/topics_frontend/ARIMA-OGD.md",
+                "file": "docs/topics_frontend/ARIMA-ONS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/topics_frontend/ARIMA-OGD.md",
+                "file": "docs/topics_frontend/ARIMA-ONS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/topics_frontend/ARIMA-OGD.md"
+                "file": "docs/topics_frontend/ARIMA-ONS.md"
               }
             }
           }
@@ -148,6 +148,15 @@
   },
   "active": "5ced857c0f1a1592",
   "lastOpenFiles": [
+    "node_modules/animejs/README.md",
+    "node_modules/animejs/LICENSE.md",
+    "node_modules/animejs/package.json",
+    "node_modules/animejs/lib/anime.min.js",
+    "node_modules/animejs/lib/anime.js",
+    "node_modules/animejs/lib/anime.es.js",
+    "node_modules/animejs/lib",
+    "node_modules/animejs",
+    "docs/topics_frontend/ARIMA-OGD.md",
     "docs/topics_frontend/ARIMA-ONS.md",
     "photos/ons.png",
     "photos/ogd.png",
@@ -170,7 +179,6 @@
     "docs/topics_frontend/Выделение сезонных и периодических составляющих.md",
     "docs/topics_frontend/Выделение тренда.md",
     "docs/topics_frontend/Спектральный анализ.md",
-    "docs/topics_frontend/ARIMA-OGD.md",
     "Без названия 2.md",
     "docs/topics_frontend/Метод Фишера + метод Стьюдента.md",
     "docs/topics_frontend/Методика Бокса-Дженкинса.md",
@@ -179,16 +187,9 @@
     "topics",
     "rndtsa_ada_2023_rk6_72b_NaumkinRU_nirs.md",
     "node_modules/@mongodb-js/saslprep/readme.md",
-    "Без названия 1.md",
     "node_modules/semver/package.json",
     "node_modules/semver/bin/semver.js",
     "node_modules/semver/bin",
-    "node_modules/semver/preload.js",
-    "node_modules/semver/index.js",
-    "node_modules/semver/ranges/valid.js",
-    "node_modules/semver/ranges/to-comparators.js",
-    "node_modules/semver/ranges/subset.js",
-    "node_modules/semver/ranges/simplify.js",
     "public_backend/images/delete.png",
     "public_backend/images/cross.png",
     "public_back/images/delete.png",

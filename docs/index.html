@@ -4,11 +4,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Временные ряды</title>
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2103/2103658.png" type="image/x-icon">
-  <script src="https://d3js.org/d3.v5.min.js"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.1/sigma.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.1/plugins/sigma.plugins.dragNodes.min.js"></script>
+
+  <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.1.3/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
   <script type="text/x-mathjax-config">
   MathJax = {
       tex: {
@@ -29,7 +33,8 @@
   </header>
   <main>
       <div id="container">
-          <div id="myGraph"> <!-- Graph --> </div>
+          <!-- <div id="myGraph"> Graph </div> -->
+          <div id="myGraph"></div>
       </div>
       <div id="file-text-container">
         <div id="file-text"> File text </div>
